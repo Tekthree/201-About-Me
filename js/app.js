@@ -60,17 +60,22 @@ if (schoolJapan.toLowerCase() === 'yes' || schoolJapan.toLowerCase() === 'y'){
 
 guessSchool();
 
-// Did I move to Thailand at some point
-var movedThailand = prompt('Did I move to Thailand at some point');
-if(movedThailand.toLowerCase() === 'yes' || movedThailand.toLowerCase() === 'y') {
-    // console.log('correct');
-    alert ('Your right, I moved soon as I got out of the Air Force');
-    score++;
-} else { 
-    // console.log('wrong');
-    alert('Wrong, I was there for 2 years, right after the military');
+function guessThailand(){
+  // Did I move to Thailand at some point
+  var movedThailand = prompt('Did I move to Thailand at some point');
+  if(movedThailand.toLowerCase() === 'yes' || movedThailand.toLowerCase() === 'y') {
+      // console.log('correct');
+      alert ('Your right, I moved soon as I got out of the Air Force');
+      score++;
+  } else { 
+      // console.log('wrong');
+      alert('Wrong, I was there for 2 years, right after the military');
 
+  }
 }
+
+guessThailand();
+
 // Is one of my goals to sky dive off the Seattle space needle
 var myGoal = prompt('Is one of my goals to sky dive off the Seattle space needle');
 if(myGoal.toLowerCase() === 'no' || myGoal.toLowerCase() === 'n') {
