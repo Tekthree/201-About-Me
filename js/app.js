@@ -2,11 +2,13 @@
 // keeping score of all the correct answers
 var score =0;
 
-function greeting() {
+
   //greeting
-  alert('What is up, my name is Tek');
-  var username = prompt ('Thanks for stoping by, what\'s your name');
+alert('What is up, my name is Tek');
+var username = prompt ('Thanks for stoping by, what\'s your name');
   //console.log('the user\'s name is ' + username);
+
+function greeting() {
   alert('I was so bored, thrilled to have you with me ' + username);
 }
 
@@ -24,18 +26,25 @@ function userGuessingGame() {
 
 userGuessingGame();
 
-// Was my last Job a Clown in a Traveling Circus 
-var lastJob = prompt('Was my last Job a Clown in a Traveling Circus');
-if(lastJob.toLowerCase() === 'no' || lastJob.toLowerCase() === 'n') {
-    // console.log('correct');
-    alert ('Lol, tried to get you but you kept your head on the ground, good work');
-    score++;
-} else { 
-    // console.log('wrong');
-    alert('You thought I was a Clown? Interesting');
 
+function guessLastJob() {
+  // Was my last Job a Clown in a Traveling Circus 
+  var lastJob = prompt('Was my last Job a Clown in a Traveling Circus');
+  if(lastJob.toLowerCase() === 'no' || lastJob.toLowerCase() === 'n') {
+      // console.log('correct');
+      alert ('Lol, tried to get you but you kept your head on the ground, good work');
+      score++;
+  } else { 
+      // console.log('wrong');
+      alert('You thought I was a Clown? Interesting');
+
+  }
 }
 
+guessLastJob()
+
+
+function guessSchool(){
 // Did i go to shool in Japan
 var schoolJapan = prompt('Do you think I went to school in Japan?');
 if (schoolJapan.toLowerCase() === 'yes' || schoolJapan.toLowerCase() === 'y'){
@@ -47,6 +56,9 @@ if (schoolJapan.toLowerCase() === 'yes' || schoolJapan.toLowerCase() === 'y'){
     alert('It\'s crazy but I was there');
 
 }
+}
+
+guessSchool();
 
 // Did I move to Thailand at some point
 var movedThailand = prompt('Did I move to Thailand at some point');
@@ -105,4 +117,4 @@ for (i = 0; i < 6; i++) {
 }
 
 //Thanks for playing
-alert('Well that was fun ' + username + '. Thanks for hangin with me');
+alert('Well that was fun ' + username + '. Thanks for hangin with me. You got ' + score + ' questions right!');
