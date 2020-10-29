@@ -115,21 +115,26 @@ function guessingGame() {
 
 guessingGame();
 
-var countriesVisited = ['japan', 'iraq', 'thailand'];
-for (i = 0; i < 6; i++) {
-  var countryGuess = prompt('Let\'s play a game. Can you guess any of the countries I have lived in in the past 15 years').toLowerCase();
-  if (countryGuess === countriesVisited[0] ||
-    countryGuess === countriesVisited[1] ||
-    countryGuess === countriesVisited[2]) {
-    score++;
-    alert('You\'re right. I have been to a lot of different countries.');
-    break;
-  } else if (i === 5) {
-    alert('Sorry. The correct answers are Japan, Iraq or Thailand');
-  } else {
-    alert('Wrong. Try again.');
+
+function guessCountryVisited() {
+  var countriesVisited = ['japan', 'iraq', 'thailand'];
+  for (i = 0; i < 6; i++) {
+    var countryGuess = prompt('Let\'s play a game. Can you guess any of the countries I have lived in in the past 15 years').toLowerCase();
+    if (countryGuess === countriesVisited[0] ||
+      countryGuess === countriesVisited[1] ||
+      countryGuess === countriesVisited[2]) {
+      score++;
+      alert('You\'re right. I have been to a lot of different countries.');
+      break;
+    } else if (i === 5) {
+      alert('Sorry. The correct answers are Japan, Iraq or Thailand');
+    } else {
+      alert('Wrong. Try again.');
+    }
   }
 }
+
+guessCountryVisited();
 
 //Thanks for playing
 alert('Well that was fun ' + username + '. Thanks for hangin with me. You got ' + score + ' questions right!');
