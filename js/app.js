@@ -12,14 +12,17 @@ function greeting() {
 
 greeting();
 
-//asking if they want to play a game
-var guessingGame = prompt('You down to play a guessing game ' + username + '. Let\'s go');
-if (guessingGame.toLowerCase() === 'yes' || guessingGame.toLowerCase() === 'y'){
-    alert ('sweet let\'s go. I\'ll ask some questions and you can answer (yes) or (no)');
-} else { 
-    alert('Snap, we can try some other time');
+function userGuessingGame() {
+  //asking if they want to play a game
+  var guessingGame = prompt('You down to play a guessing game ' + username + '. Let\'s go');
+  if (guessingGame.toLowerCase() === 'yes' || guessingGame.toLowerCase() === 'y'){
+      alert ('sweet let\'s go. I\'ll ask some questions and you can answer (yes) or (no)');
+  } else { 
+      alert('Snap, we can try some other time');
+  }
 }
 
+userGuessingGame();
 
 // Was my last Job a Clown in a Traveling Circus 
 var lastJob = prompt('Was my last Job a Clown in a Traveling Circus');
