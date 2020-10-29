@@ -76,17 +76,23 @@ function guessThailand(){
 
 guessThailand();
 
-// Is one of my goals to sky dive off the Seattle space needle
-var myGoal = prompt('Is one of my goals to sky dive off the Seattle space needle');
-if(myGoal.toLowerCase() === 'no' || myGoal.toLowerCase() === 'n') {
-    // console.log('correct');
-    alert ('Nice, your pay attention');
-    score++;
-} else { 
-    // console.log('wrong');
-    alert('Dang, you must think I\'m crazy, WoW');
+function guessGoals() {
+    // Is one of my goals to sky dive off the Seattle space needle
+  var myGoal = prompt('Is one of my goals to sky dive off the Seattle space needle');
+  if(myGoal.toLowerCase() === 'no' || myGoal.toLowerCase() === 'n') {
+      // console.log('correct');
+      alert ('Nice, your pay attention');
+      score++;
+  } else { 
+      // console.log('wrong');
+      alert('Dang, you must think I\'m crazy, WoW');
 
+  }
 }
+
+guessGoals();
+
+
 alert('you have 10 guesses. Guess 1-10');
 var answer = 3;
 var guess = prompt('what is your guess?');
