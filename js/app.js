@@ -93,23 +93,27 @@ function guessGoals() {
 guessGoals();
 
 
-alert('you have 10 guesses. Guess 1-10');
-var answer = 3;
-var guess = prompt('what is your guess?');
-for (var i = 0; i < 3; i++) {
-  if (answer == guess) {
-    alert('you guessed correctly');
-    score++;
-    break;
-  } else if (guess < answer) {
-    guess = prompt('Too low. Please try again');
-  } else if (guess > answer) {
-    guess = prompt('Too high. Please try a lower number');
-  } else if (i === 2) {
-    alert('Dang dude, wrong answer. The correct answer is 3.');
-    break;
+function guessingGame() {
+  alert('you have 10 guesses. Guess 1-10');
+  var answer = 3;
+  var guess = prompt('what is your guess?');
+  for (var i = 0; i < 3; i++) {
+    if (answer == guess) {
+      alert('you guessed correctly');
+      score++;
+      break;
+    } else if (guess < answer) {
+      guess = prompt('Too low. Please try again');
+    } else if (guess > answer) {
+      guess = prompt('Too high. Please try a lower number');
+    } else if (i === 2) {
+      alert('Dang dude, wrong answer. The correct answer is 3.');
+      break;
+    }
   }
 }
+
+guessingGame();
 
 var countriesVisited = ['japan', 'iraq', 'thailand'];
 for (i = 0; i < 6; i++) {
