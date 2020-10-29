@@ -2,17 +2,20 @@
 // keeping score of all the correct answers
 var score =0;
 
-//greeting
-alert('What is up, my name is Tek');
-var username = prompt ('Thanks for stoping by, what\'s your name');
-//console.log('the user\'s name is ' + username);
-alert('I was so bored, thrilled to have you with me ' + username);
+function greeting() {
+  //greeting
+  alert('What is up, my name is Tek');
+  var username = prompt ('Thanks for stoping by, what\'s your name');
+  //console.log('the user\'s name is ' + username);
+  alert('I was so bored, thrilled to have you with me ' + username);
+}
+
+greeting();
 
 //asking if they want to play a game
 var guessingGame = prompt('You down to play a guessing game ' + username + '. Let\'s go');
 if (guessingGame.toLowerCase() === 'yes' || guessingGame.toLowerCase() === 'y'){
     alert ('sweet let\'s go. I\'ll ask some questions and you can answer (yes) or (no)');
-    
 } else { 
     alert('Snap, we can try some other time');
 }
@@ -23,6 +26,7 @@ var lastJob = prompt('Was my last Job a Clown in a Traveling Circus');
 if(lastJob.toLowerCase() === 'no' || lastJob.toLowerCase() === 'n') {
     // console.log('correct');
     alert ('Lol, tried to get you but you kept your head on the ground, good work');
+    score++;
 } else { 
     // console.log('wrong');
     alert('You thought I was a Clown? Interesting');
@@ -34,7 +38,7 @@ var schoolJapan = prompt('Do you think I went to school in Japan?');
 if (schoolJapan.toLowerCase() === 'yes' || schoolJapan.toLowerCase() === 'y'){
     // console.log('correct');
     alert ('Yep, My dad was in the military as well, we moved there freshman year');
-    
+    score++;
 } else { 
     // console.log('wrong');
     alert('It\'s crazy but I was there');
@@ -46,6 +50,7 @@ var movedThailand = prompt('Did I move to Thailand at some point');
 if(movedThailand.toLowerCase() === 'yes' || movedThailand.toLowerCase() === 'y') {
     // console.log('correct');
     alert ('Your right, I moved soon as I got out of the Air Force');
+    score++;
 } else { 
     // console.log('wrong');
     alert('Wrong, I was there for 2 years, right after the military');
@@ -56,6 +61,7 @@ var myGoal = prompt('Is one of my goals to sky dive off the Seattle space needle
 if(myGoal.toLowerCase() === 'no' || myGoal.toLowerCase() === 'n') {
     // console.log('correct');
     alert ('Nice, your pay attention');
+    score++;
 } else { 
     // console.log('wrong');
     alert('Dang, you must think I\'m crazy, WoW');
@@ -67,6 +73,7 @@ var guess = prompt('what is your guess?');
 for (var i = 0; i < 3; i++) {
   if (answer == guess) {
     alert('you guessed correctly');
+    score++;
     break;
   } else if (guess < answer) {
     guess = prompt('Too low. Please try again');
