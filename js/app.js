@@ -1,6 +1,6 @@
 'use strict'
 // keeping score of all the correct answers
-var score =0;
+var score = 0;
 
 
   //greeting
@@ -11,6 +11,11 @@ var username = prompt ('Thanks for stoping by, what\'s your name');
 function greeting() {
   alert('I was so bored, thrilled to have you with me ' + username);
 }
+
+
+
+
+
 
 greeting();
 
@@ -31,11 +36,11 @@ function guessLastJob() {
   // Was my last Job a Clown in a Traveling Circus 
   var lastJob = prompt('Was my last Job a Clown in a Traveling Circus');
   if(lastJob.toLowerCase() === 'no' || lastJob.toLowerCase() === 'n') {
-      // console.log('correct');
+      //console.log('correct');
       alert ('Lol, tried to get you but you kept your head on the ground, good work');
       score++;
   } else { 
-      // console.log('wrong');
+      //console.log('wrong');
       alert('You thought I was a Clown? Interesting');
 
   }
